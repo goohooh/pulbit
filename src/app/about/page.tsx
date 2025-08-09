@@ -46,7 +46,6 @@ export default function AboutPage() {
                     <li>정밀 농업(드론·AI·로봇)</li>
                     <li>장기 생산성 증대 및 탄소 크레딧</li>
                   </ul>
-                  <a href="#farmos" className="inline-flex items-center justify-center mt-4 rounded-md bg-brand text-white px-4 py-2">상세 보기</a>
                 </div>
                 <div className="col-span-12 md:col-span-6 lg:col-span-4 card p-6" id="mmc">
                   <h3 className="text-xl font-semibold">Module Farm</h3>
@@ -55,7 +54,6 @@ export default function AboutPage() {
                     <li>이동성·확장성, 에너지 효율</li>
                     <li>터널·온실 등 다양한 시설 적용</li>
                   </ul>
-                  <a href="#mmc" className="inline-flex items-center justify-center mt-4 rounded-md bg-brand text-white px-4 py-2">상세 보기</a>
                 </div>
                 <div className="col-span-12 md:col-span-12 lg:col-span-4 card p-6" id="byuri">
                   <h3 className="text-xl font-semibold">Farmlytics AI</h3>
@@ -65,7 +63,6 @@ export default function AboutPage() {
                     <li>미래를 예측하는 농업</li>
                     <li>지속 가능한 농업</li>
                   </ul>
-                  <a href="#byuri" className="inline-flex items-center justify-center mt-4 rounded-md bg-brand text-white px-4 py-2">상세 보기</a>
                 </div>
               </div>
             </div>
