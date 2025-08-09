@@ -33,7 +33,7 @@
   --color-accent: var(--accent);
   --ring: var(--ring);
 
-  --font-sans: var(--font-sans);
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   --font-serif: var(--font-serif);
 }
 
@@ -43,10 +43,18 @@ html, body {
 }
 
 body {
+  /* Use Pretendard font as default */
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+  
   /* subtle brand glow inspired by clean, modern product pages */
   background: radial-gradient(1200px 600px at 70% -10%, color-mix(in oklab, var(--color-brand) 18%, transparent), transparent),
               radial-gradient(1000px 500px at -10% 20%, color-mix(in oklab, var(--color-accent) 10%, transparent), transparent),
               var(--background);
+}
+
+/* Font overrides */
+.font-sans, * {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
 }
 
 /* Utilities */

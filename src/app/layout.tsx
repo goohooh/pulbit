@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
 import './globals.css';
 
-import { Inter, Merriweather } from 'next/font/google';
-
-const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin"],
-});
+import { Merriweather } from 'next/font/google';
 
 const merriweather = Merriweather({
   variable: "--font-serif",
@@ -25,8 +20,16 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${merriweather.variable} antialiased bg-background text-foreground`}>
+    <html lang="ko">
+      <head>
+        <link
+          rel="stylesheet"
+          as="style"
+          crossOrigin=""
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+        />
+      </head>
+      <body className={`${merriweather.variable} font-sans antialiased bg-background text-foreground`}>
         {children}
       </body>
     </html>

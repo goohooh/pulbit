@@ -21,11 +21,11 @@ export default function Footer() {
             <div className="size-6 rounded-md bg-brand" aria-hidden />
             <span>Pulbit</span>
           </div>
-          <div className="flex items-center gap-6">
+          {/* <div className="flex items-center gap-6">
             <a href="#privacy" className="hover:text-foreground">Privacy</a>
             <a href="#terms" className="hover:text-foreground">Terms</a>
             <a href="/contact" className="hover:text-foreground">Contact</a>
-          </div>
+          </div> */}
           <div>© {new Date().getFullYear()} Pulbit</div>
         </div>
       </div>

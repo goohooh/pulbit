@@ -26,7 +26,7 @@ export default function Features() {
             <h2 className="text-2xl md:text-3xl font-serif tracking-tight">현대 농업을 위한 설계</h2>
             <p className="lead mt-3 max-w-prose">중요한 부분은 간단하게, 핵심은 엄격하게.</p>
           </div>
-          <a href="#demo" className="hidden md:inline-flex h-10 px-4 rounded-md bg-brand text-white hover:opacity-95">데모 보기</a>
+          <a href="#demo" className="hidden md:inline-flex items-center justify-center h-10 px-4 rounded-md bg-brand text-white hover:opacity-95">데모 보기</a>
         </div>
         
         <div className="mt-10 grid grid-cols-12 gap-8 items-center">

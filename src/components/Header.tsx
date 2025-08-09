@@ -12,7 +12,7 @@ export default function Header() {
           <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
         </nav>
         <div className="flex items-center gap-3">
-          <a href="#contact" className="inline-flex h-10 px-4 rounded-md bg-brand-2 text-white hover:opacity-95">문의하기</a>
+          <a href="#contact" className="inline-flex items-center justify-center h-10 px-4 rounded-md bg-brand-2 text-white hover:opacity-95">문의하기</a>
         </div>
       </div>
     </header>
