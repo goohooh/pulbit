@@ -6,7 +6,7 @@ export default function Features() {
     },
     {
       title: "적응형 관개",
-      body: "낭비를 줄이고 뿌리 시스템을 보호하는 자동화된 권장사항.",
+      body: "낭비를 줄이고 뿌리 시스템을 보호하는 자동화된 시스템",
     },
     {
       title: "추적 가능한 운영",
@@ -14,7 +14,7 @@ export default function Features() {
     },
     {
       title: "개방형 데이터 표준",
-      body: "CSV, GeoJSON으로 내보내고 협동조합 시스템과 통합하세요.",
+      body: "미래를 선도할 Farm OS와 통합하세요.",
     },
   ];
 
@@ -26,7 +26,6 @@ export default function Features() {
             <h2 className="text-2xl md:text-3xl font-serif tracking-tight">현대 농업을 위한 설계</h2>
             <p className="lead mt-3 max-w-prose">중요한 부분은 간단하게, 핵심은 엄격하게.</p>
           </div>
-          <a href="#demo" className="hidden md:inline-flex items-center justify-center h-10 px-4 rounded-md bg-brand text-white hover:opacity-95">데모 보기</a>
         </div>
         
         <div className="mt-10 grid grid-cols-12 gap-8 items-center">
