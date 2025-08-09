@@ -13,7 +13,8 @@ export default function Hero() {
               playsInline
               poster="/hero-farm.svg"
             >
-              <source src="/demo.mp4" type="video/mp4" />
+              <source src="/videos/sunset-and-farm-field.webm" type="video/webm" />
+              <source src="/videos/sunset-and-farm-field.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_70%_-10%,_color-mix(in_oklab,var(--color-brand)_18%,transparent),_transparent)] pointer-events-none" />
           </div>

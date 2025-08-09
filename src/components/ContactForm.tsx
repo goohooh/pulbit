@@ -40,55 +40,84 @@ export default function ContactForm({
   }
 
   return (
-    <div>
+    <div className={compact ? "w-full" : ""}>
       {!compact && (
-        <div className="mb-6">
-          <h2 className="text-2xl font-serif font-semibold">{title}</h2>
-          <p className="text-muted mt-2">{description}</p>
+        <div className="mb-8">
+          <h2 className="text-3xl font-serif font-semibold text-center">{title}</h2>
+          <p className="text-muted mt-3 text-center text-lg">{description}</p>
         </div>
       )}
-      <form onSubmit={onSubmit} className={`card p-6 space-y-4 ${compact ? 'max-w-md' : ''}`}>
-        <div>
-          <label className="block text-sm text-muted mb-1" htmlFor="name">이름</label>
-          <input 
-            id="name" 
-            name="name" 
-            required 
-            className="w-full h-11 px-3 rounded-md border outline-none focus:ring-2 focus:ring-[var(--ring)] bg-background" 
-          />
-        </div>
-        <div>
-          <label className="block text-sm text-muted mb-1" htmlFor="email">이메일</label>
-          <input 
-            id="email" 
-            name="email" 
-            type="email" 
-            required 
-            className="w-full h-11 px-3 rounded-md border outline-none focus:ring-2 focus:ring-[var(--ring)] bg-background" 
-          />
-        </div>
-        <div>
-          <label className="block text-sm text-muted mb-1" htmlFor="message">메시지</label>
-          <textarea 
-            id="message" 
-            name="message" 
-            rows={compact ? 3 : 5} 
-            required 
-            className="w-full px-3 py-2 rounded-md border outline-none focus:ring-2 focus:ring-[var(--ring)] bg-background" 
-          />
-        </div>
-        <button 
-          disabled={status === "submitting"} 
-          className="inline-flex h-11 px-5 rounded-md bg-brand text-white font-medium hover:opacity-95 disabled:opacity-50"
-        >
-          {status === "submitting" ? "전송 중..." : "보내기"}
-        </button>
-        {message && (
-          <div className={status === "success" ? "text-green-600" : "text-red-600"}>
-            {message}
+      <div className="card p-8 w-full">
+        <form onSubmit={onSubmit} className="space-y-6">
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-12 md:col-span-6">
+              <label className="block text-sm font-medium text-muted mb-2" htmlFor="name">
+                이름 *
+              </label>
+              <input 
+                id="name" 
+                name="name" 
+                required 
+                className="w-full h-12 px-4 rounded-lg border border-ring/40 outline-none focus:ring-2 focus:ring-brand focus:border-brand bg-background transition-colors text-base" 
+                placeholder="성함을 입력해 주세요"
+              />
+            </div>
+            <div className="col-span-12 md:col-span-6">
+              <label className="block text-sm font-medium text-muted mb-2" htmlFor="email">
+                이메일 *
+              </label>
+              <input 
+                id="email" 
+                name="email" 
+                type="email" 
+                required 
+                className="w-full h-12 px-4 rounded-lg border border-ring/40 outline-none focus:ring-2 focus:ring-brand focus:border-brand bg-background transition-colors text-base" 
+                placeholder="이메일 주소를 입력해 주세요"
+              />
+            </div>
           </div>
-        )}
-      </form>
+          <div>
+            <label className="block text-sm font-medium text-muted mb-2" htmlFor="message">
+              메시지 *
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows={compact ? 4 : 6} 
+              required 
+              className="w-full px-4 py-3 rounded-lg border border-ring/40 outline-none focus:ring-2 focus:ring-brand focus:border-brand bg-background transition-colors text-base resize-none" 
+              placeholder="문의하실 내용이나 요청사항을 자세히 적어주세요..."
+            />
+          </div>
+          <div className="flex justify-center pt-2">
+            <button 
+              disabled={status === "submitting"} 
+              className="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-brand text-white font-medium hover:opacity-95 disabled:opacity-50 transition-opacity min-w-[120px] text-base"
+            >
+              {status === "submitting" ? (
+                <>
+                  <svg className="animate-spin -ml-1 mr-3 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  전송 중...
+                </>
+              ) : (
+                "메시지 전송"
+              )}
+            </button>
+          </div>
+          {message && (
+            <div className={`text-center p-4 rounded-lg ${
+              status === "success" 
+                ? "text-green-700 bg-green-50 border border-green-200" 
+                : "text-red-700 bg-red-50 border border-red-200"
+            }`}>
+              <div className="font-medium">{message}</div>
+            </div>
+          )}
+        </form>
+      </div>
     </div>
   );
 }
