@@ -1,0 +1,26 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stylized farmland">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#bfe3ff"/>
+      <stop offset="100%" stop-color="#eaf6ff"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#9ae6b4"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="700" fill="url(#sky)"/>
+  <rect y="700" width="1600" height="500" fill="url(#field)"/>
+  <g opacity="0.5">
+    <path d="M0,880 C400,840 1200,820 1600,860" stroke="#0ea5a3" stroke-width="8" fill="none"/>
+    <path d="M0,980 C400,920 1200,900 1600,940" stroke="#0b3b6e" stroke-width="8" fill="none"/>
+    <path d="M0,1080 C400,1000 1200,980 1600,1020" stroke="#22c55e" stroke-width="8" fill="none"/>
+  </g>
+  <g fill="#0b3b6e" opacity="0.6">
+    <circle cx="1300" cy="200" r="60" fill="#fde68a"/>
+    <rect x="200" y="760" width="180" height="120" rx="12"/>
+    <rect x="410" y="740" width="220" height="140" rx="12"/>
+    <rect x="660" y="780" width="160" height="100" rx="12"/>
+  </g>
+</svg>
+
