@@ -1,20 +1,20 @@
 export default function Features() {
   const items = [
     {
-      title: "Soil-first analytics",
-      body: "Measure moisture, organic matter, and compaction trends in one view.",
+      title: "토양 중심 분석",
+      body: "수분, 유기물, 압축도 동향을 한 눈에 측정하세요.",
     },
     {
-      title: "Adaptive irrigation",
-      body: "Automated recommendations to cut waste and protect root systems.",
+      title: "적응형 관개",
+      body: "낭비를 줄이고 뿌리 시스템을 보호하는 자동화된 권장사항.",
     },
     {
-      title: "Traceable operations",
-      body: "Audit-ready logs for inputs, equipment, and harvests.",
+      title: "추적 가능한 운영",
+      body: "투입재, 장비, 수확에 대한 감사 준비된 로그.",
     },
     {
-      title: "Open data standards",
-      body: "Export to CSV, GeoJSON, and integrate with your co-op systems.",
+      title: "개방형 데이터 표준",
+      body: "CSV, GeoJSON으로 내보내고 협동조합 시스템과 통합하세요.",
     },
   ];
 
@@ -23,8 +23,8 @@ export default function Features() {
       <div className="mx-auto max-w-6xl">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-2xl md:text-3xl font-serif tracking-tight">Built for modern agriculture</h2>
-            <p className="lead mt-3 max-w-prose">Simple where it matters, rigorous under the hood.</p>
+            <h2 className="text-2xl md:text-3xl font-serif tracking-tight">현대 농업을 위한 설계</h2>
+            <p className="lead mt-3 max-w-prose">중요한 부분은 간단하게, 핵심은 엄격하게.</p>
           </div>
           <a href="#demo" className="hidden md:inline-flex h-10 px-4 rounded-md bg-brand text-white hover:opacity-95">데모 보기</a>
         </div>

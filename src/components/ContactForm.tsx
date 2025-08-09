@@ -77,6 +77,23 @@ export default function ContactForm({
             </div>
           </div>
           <div>
+            <label className="block text-sm font-medium text-muted mb-2" htmlFor="inquiry-type">
+              문의 유형 *
+            </label>
+            <select 
+              id="inquiry-type" 
+              name="inquiryType" 
+              required 
+              className="w-full h-12 px-4 rounded-lg border border-ring/40 outline-none focus:ring-2 focus:ring-brand focus:border-brand bg-background transition-colors text-base"
+            >
+              <option value="">문의 유형을 선택해 주세요</option>
+              <option value="투자">투자</option>
+              <option value="창농">창농</option>
+              <option value="협업">협업</option>
+              <option value="농작물 공급망">농작물 공급망</option>
+            </select>
+          </div>
+          <div>
             <label className="block text-sm font-medium text-muted mb-2" htmlFor="message">
               메시지 *
             </label>
