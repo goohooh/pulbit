@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
+/* Brand palette for a visionary + trustworthy feel */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --foreground: #0f172a; /* slate-900 */
+  --muted: #334155; /* slate-700 */
+  --brand: #0b3b6e; /* deep navy */
+  --brand-2: #166534; /* deep green */
+  --accent: #16a34a; /* primary green */
+  --ring: #94a3b8; /* slate-400 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0b1220;
+    --foreground: #e2e8f0;
+    --muted: #94a3b8;
+    --brand: #0f3d7a;     /* navy (dark) */
+    --brand-2: #14532d;   /* green (dark) */
+    --accent: #22c55e;    /* green */
+    --ring: #64748b;
   }
 }
 
+/* Tailwind v4 config via CSS vars */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-brand-2: var(--brand-2);
+  --color-accent: var(--accent);
+  --ring: var(--ring);
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+}
+
+/* Base */
+html, body {
+  height: 100%;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* subtle brand glow inspired by clean, modern product pages */
+  background: radial-gradient(1200px 600px at 70% -10%, color-mix(in oklab, var(--color-brand) 18%, transparent), transparent),
+              radial-gradient(1000px 500px at -10% 20%, color-mix(in oklab, var(--color-accent) 10%, transparent), transparent),
+              var(--background);
+}
+
+/* Utilities */
+.container-px {
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+}
+
+.lead {
+  font-size: clamp(1.05rem, 1.2vw + 0.8rem, 1.25rem);
+  color: var(--color-muted);
+}
+
+.h0 {
+  font-size: clamp(2.2rem, 3.5vw + 1rem, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.card {
+  border: 1px solid color-mix(in oklab, var(--ring), transparent 60%);
+  background: color-mix(in oklab, var(--background), transparent 10%);
+  border-radius: 16px;
 }
